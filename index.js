@@ -10,7 +10,6 @@ const handleError = require("./utlis/errorresponse");
 
 const bookRoute = require("./routes/bookRoute");
 const authRoute = require("./routes/authRoutes");
-// const build=require("../")
 
 const path = require("path");
 dotenv.config();
@@ -33,7 +32,7 @@ __dirname = path.resolve();
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/client/build")));
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "./client/src/index.js"));
   });
 } else {
   app.get("/", (req, res) => {
