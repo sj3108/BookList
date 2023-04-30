@@ -38,27 +38,6 @@ exports.deleteBook = async (req, res, next) => {
   }
 };
 
-// exports.searchcontroller = async (req, res, next) => {
-//   try {
-//     const { key, page, limit } = req.query;
-//     const skip = (page - 1) * limit;
-//     const search = key
-//       ? {
-//           $or: [
-//             { name: { $regex: key, $options: "i" } },
-//             { description: { $regex: key, $options: "i" } },
-//           ],
-//         }
-//       : {};
-//     const data = await Book.find(search)
-//       .populate("author")
-//       .skip(skip)
-//       .limit(limit);
-//     res.json({ data });
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
 
 exports.searchcontroller = async (req, res, next) => {
   try {
