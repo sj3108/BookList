@@ -25727,7 +25727,7 @@
                               )
                             );
                           case 4:
-                            sn.success("Login successfully"),
+                            window.alert("Login successfully"),
                               localStorage.setItem("authToken", !0),
                               r("/"),
                               (e.next = 14);
@@ -27128,7 +27128,7 @@
                             );
                           case 4:
                             e.sent,
-                              sn.success("Login successfully"),
+                            window.alert("Login successfully"),
                               t("/"),
                               (e.next = 14);
                             break;
@@ -27278,7 +27278,7 @@
                               )
                             );
                           case 4:
-                            sn.success("User registered successfully"),
+                            window.alert("User registered successfully"),
                               n("/login"),
                               (e.next = 13);
                             break;
