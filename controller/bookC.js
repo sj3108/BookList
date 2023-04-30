@@ -63,7 +63,7 @@ exports.deleteBook = async (req, res, next) => {
 exports.searchcontroller = async (req, res, next) => {
   try {
     const { key } = req.query;
-    // await Book.createIndexes({ book: "text", author: "text" });
+    await Book.createIndexes({ book: "text" });
     const list = await Book.find({ $text: { $search: key } });
     res.status(200).json(list);
   } catch (error) {
