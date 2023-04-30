@@ -27128,7 +27128,7 @@
                             );
                           case 4:
                             e.sent,
-                            window.alert("Login successfully"),
+                              window.alert("Book added successfully"),
                               t("/"),
                               (e.next = 14);
                             break;
