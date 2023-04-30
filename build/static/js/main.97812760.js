@@ -25718,10 +25718,13 @@
                               t.preventDefault(),
                               (e.prev = 1),
                               (e.next = 4),
-                              Gr.post("http://localhost:8100/api/auth/login", {
-                                email: u,
-                                password: f,
-                              })
+                              Gr.post(
+                                "https://booklist-5g3b.onrender.com/api/auth/login",
+                                {
+                                  email: u,
+                                  password: f,
+                                }
+                              )
                             );
                           case 4:
                             sn.success("Login successfully"),
@@ -26325,7 +26328,7 @@
                               (e.prev = 0),
                               (e.next = 3),
                               Gr.post(
-                                "http://localhost:8100/api/auth/logout"
+                                "https://booklist-5g3b.onrender.com/api/auth/logout"
                               ).then(localStorage.removeItem("authToken"))
                             );
                           case 3:
@@ -26357,7 +26360,11 @@
             l = i[0],
             u =
               (i[1],
-              wc("http://localhost:8100/api/book/search?key=".concat(l)));
+              wc(
+                "https://booklist-5g3b.onrender.com/api/book/search?key=".concat(
+                  l
+                )
+              ));
           u.data, u.error;
           return (0, yo.jsx)(ko, {
             sx: { flexGrow: 1 },
@@ -26812,7 +26819,11 @@
             s = (0, o.Z)(u, 2),
             c = s[0],
             d = s[1],
-            f = wc("http://localhost:8100/api/book/search?key=".concat(c)),
+            f = wc(
+              "https://booklist-5g3b.onrender.com/api/book/search?key=".concat(
+                c
+              )
+            ),
             p = f.data,
             h = f.loading,
             m =
@@ -26860,7 +26871,9 @@
                         return (
                           (e.next = 2),
                           Gr.delete(
-                            "http://localhost:8100/api/book/delete/".concat(t)
+                            "https://booklist-5g3b.onrender.com/api/book/delete/".concat(
+                              t
+                            )
                           ).then(function (e) {
                             console.log(e), m();
                           })
@@ -27104,11 +27117,14 @@
                               n.preventDefault(),
                               (e.prev = 1),
                               (e.next = 4),
-                              Gr.post("http://localhost:8100/api/book/add", {
-                                book: l,
-                                author: d,
-                                desc: m,
-                              })
+                              Gr.post(
+                                "https://booklist-5g3b.onrender.com/api/book/add",
+                                {
+                                  book: l,
+                                  author: d,
+                                  desc: m,
+                                }
+                              )
                             );
                           case 4:
                             e.sent,
@@ -27257,7 +27273,7 @@
                               (e.prev = 1),
                               (e.next = 4),
                               Gr.post(
-                                "http://localhost:8100/api/auth/register",
+                                "https://booklist-5g3b.onrender.com/api/auth/register",
                                 { username: l, email: d, password: m }
                               )
                             );
